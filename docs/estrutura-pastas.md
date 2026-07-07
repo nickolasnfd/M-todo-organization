@@ -1,6 +1,6 @@
 # Estrutura de Pastas (PARA)
 
-Este documento descreve a árvore de pastas definitiva usada neste projeto, tanto no computador local (Windows) quanto no Google Drive. Para entender o raciocínio por trás dessas escolhas, veja [`docs/metodologia.md`](./metodologia.md).
+Este documento descreve a árvore de pastas definitiva usada no **computador local (Windows)**. O Google Drive usa outra estrutura — o método Johnny Decimal, com raiz `Acervo/` — descrita em [`docs/google-drive.md`](./google-drive.md). Para entender o raciocínio por trás dessas escolhas (e o modelo híbrido entre os dois ambientes), veja [`docs/metodologia.md`](./metodologia.md).
 
 ## Árvore completa
 
@@ -109,10 +109,10 @@ Situações ambíguas comuns e como resolvê-las:
 
 - **Curso em andamento** → `2-Areas/02-Estudos/Desenvolvimento-Profissional/`. Enquanto o curso está sendo cursado, ele é uma responsabilidade ativa (Área), não um Projeto nem um Recurso.
 - **Curso concluído, mas quer manter o certificado** → `3-Recursos/02-Estudos/Anotacoes/` (ou subpasta equivalente dentro de `Cursos/`). Deixou de ser ativo; vira referência permanente.
-- **Material de curso concluído que nunca mais vai usar** → `4-Arquivo/03-Recursos-Obsoletos/`. Não tem mais valor de referência ativa, mas ainda vale guardar por segurança.
+- **Material de curso concluído que nunca mais vai usar** → `4-Arquivo/03-Recursos-Obsoletos/`. Não tem mais valor de referência ativa, mas ainda vale guardar por segurança. Alternativa: se vale a guarda de longo prazo, pode subir para o Acervo do Drive em `40-49_Estudos/41_Cursos` em vez de ocupar disco local.
 - **Fotos de família / acervo pessoal** → dois cenários possíveis:
   - Se é organização contínua (importar, selecionar, editar fotos recentes) → `2-Areas/04-Midia-Criativo/Fotografia/`.
   - Se é apenas um acervo estático para consulta ocasional → `3-Recursos/04-Midia-Criativo/Stock-Fotos-Videos/`.
 - **Projeto freelance que virou cliente recorrente** → começa em `1-Projetos/AAAA-MM_nome-do-projeto/` enquanto é um trabalho pontual com prazo. No momento em que o cliente passa a gerar trabalho contínuo e sem data de término, a pasta deve migrar para `2-Areas/01-Trabalho/Clientes-Recorrentes/`.
-- **Documento fiscal do ano corrente vs. anos anteriores** → declarações e comprovantes do exercício em andamento ficam em `2-Areas/03-Pessoal-Administrativo/Impostos/` (responsabilidade ativa, com prazos). Assim que o ano fiscal se encerra e a obrigação é cumprida, o material vai para `4-Arquivo/02-Areas-Inativas/` (ou pode ficar arquivado dentro da própria pasta de Impostos em uma subpasta por ano, conforme preferência).
+- **Documento fiscal do ano corrente vs. anos anteriores** → declarações e comprovantes do exercício em andamento ficam em `2-Areas/03-Pessoal-Administrativo/Impostos/` (responsabilidade ativa, com prazos). Assim que o ano fiscal se encerra e a obrigação é cumprida, o material sobe para o Acervo do Drive, em `20-29_Financeiro/21_Impostos` (uma subpasta por ano) — anos anteriores encerrados são acervo de longo prazo, não trabalho ativo, e não precisam ocupar o `4-Arquivo` local.
 - **Ideia ou rascunho sem destino óbvio ainda** → não force uma categoria: deixe em `0-Inbox/` até a próxima revisão semanal, quando ficará claro se é Projeto, Área ou Recurso.

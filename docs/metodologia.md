@@ -26,6 +26,8 @@ Isso evita que "Areas" e "Recursos" virem gavetas genéricas e mantém a navega�
 
 ## Critério de decisão: o que vai onde
 
+Este critério (itens 1-6) vale para o **computador**, onde o PARA está em uso. No Drive a pergunta é mais simples: "em qual das 7 áreas numeradas do Acervo isso se encaixa?" — e, sem lugar óbvio, o item vai para `00-09_Sistema/01_Inbox` até a próxima revisão (ver [`docs/google-drive.md`](google-drive.md)).
+
 1. Tem prazo e resultado final claro, ativo agora? → **Projetos**.
 2. Responsabilidade contínua, sem "fim" definido? → **Areas**.
 3. Material de referência sem manutenção ativa exigida? → **Recursos**.
@@ -44,9 +46,18 @@ Aplica-se o item 4 do critério acima, com estes detalhes:
 
 A árvore completa de pastas está em [`docs/estrutura-pastas.md`](estrutura-pastas.md).
 
-## Princípio do espelhamento
+## Modelo híbrido: PARA no computador, Johnny Decimal no Drive
 
-A mesma árvore, os mesmos nomes de pasta e a mesma numeração são usados em qualquer ambiente — computador Windows, Google Drive, ou qualquer ambiente futuro. Isso elimina a necessidade de "traduzir" a organização mentalmente ao trocar de dispositivo ou serviço, reduzindo a carga cognitiva de encontrar e guardar arquivos.
+Os dois ambientes têm papéis diferentes, e por isso usam métodos diferentes:
+
+- **Computador (Windows) → PARA.** É onde acontece o trabalho ativo: projetos com prazo, responsabilidades em andamento, material de consulta frequente. O PARA é otimizado exatamente para isso — organizar por grau de atuabilidade.
+- **Google Drive → Johnny Decimal.** O Drive é essencialmente acervo/biblioteca: documentos guardados, comprovantes, backups, fotos. Para acervo estável, o Johnny Decimal é superior — códigos numéricos fixos e previsíveis (no máximo 10 áreas × 10 categorias), de modo que cada coisa tem um endereço permanente que não muda conforme o estágio de vida do item.
+
+A metáfora que resume o modelo: o computador é a **bancada de trabalho**; o Drive (raiz `Acervo/`) é a **estante**.
+
+**Regra-ponte** entre os dois ambientes: quando um projeto termina no PC, os entregáveis finais que merecem guarda de longo prazo sobem para a categoria certa do Acervo — tipicamente `30-39_Trabalho/32_Projetos-Concluidos`. O `4-Arquivo` local passa a ser uma estação intermediária de curto prazo, não o destino final do que merece ser guardado.
+
+A árvore completa do Acervo e a explicação detalhada do Johnny Decimal estão em [`docs/google-drive.md`](google-drive.md).
 
 ## Convenção de nomenclatura
 

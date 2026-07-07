@@ -1,6 +1,6 @@
 # Checklist de Migração para a Estrutura PARA
 
-Guia passo a passo para migrar os arquivos existentes (computador local e Google Drive) para a nova estrutura descrita em [`docs/estrutura-pastas.md`](./estrutura-pastas.md), sem perder dados nem travar no meio do processo.
+Guia passo a passo para migrar os arquivos existentes (computador local e Google Drive) para as novas estruturas — PARA no computador ([`docs/estrutura-pastas.md`](./estrutura-pastas.md)) e Acervo Johnny Decimal no Drive ([`docs/google-drive.md`](./google-drive.md)) — sem perder dados nem travar no meio do processo.
 
 ## Fase 0 — Preparação
 
@@ -19,15 +19,18 @@ Guia passo a passo para migrar os arquivos existentes (computador local e Google
 
 ## Fase 2 — Criar a estrutura
 
-- [ ] Rodar `scripts/criar-estrutura.ps1` localmente para criar a árvore de pastas completa no computador Windows.
-- [ ] Validar que todas as pastas foram criadas com os nomes exatos definidos em `docs/estrutura-pastas.md`.
-- [ ] Rodar `scripts/criar-estrutura.ps1` novamente apontando para a pasta montada/sincronizada do Google Drive, seguindo as instruções específicas de sincronização em [`docs/google-drive.md`](./google-drive.md).
-- [ ] Conferir que a estrutura no Google Drive é espelho exato da estrutura local (mesmos nomes, mesma hierarquia).
+- [ ] Rodar `scripts/criar-estrutura.ps1` localmente para criar a árvore PARA completa no computador Windows.
+- [ ] Validar que todas as pastas locais foram criadas com os nomes exatos definidos em `docs/estrutura-pastas.md`.
+- [ ] Rodar `scripts/criar-estrutura-drive.ps1` apontando para a unidade do Google Drive para criar a estrutura do Acervo (Johnny Decimal), seguindo as instruções em [`docs/google-drive.md`](./google-drive.md).
+- [ ] Validar que a estrutura do Acervo no Drive foi criada com os nomes exatos definidos em `docs/google-drive.md` (as duas árvores são diferentes de propósito — não devem ser espelho uma da outra).
 
 ## Fase 3 — Migração em lotes
 
-Migrar em lotes, sempre na ordem abaixo — do mais fácil/menos ambíguo para o mais delicado:
+Migrar em lotes, sempre na ordem abaixo — do mais fácil/menos ambíguo para o mais delicado.
 
+Para cada lote, decidir primeiro o **ambiente**, depois a pasta: "isso é acervo de longo prazo (Drive/Acervo) ou material de trabalho/consulta ativa (PC/PARA)?". Em um Drive que é majoritariamente acervo, a maior parte dos arquivos da nuvem só muda de lugar dentro do próprio Drive — da estrutura antiga para a categoria certa do `Acervo/`.
+
+- [ ] **Lote 0 — Decisão de ambiente**: para cada grupo de arquivos do inventário, marcar se o destino é PC/PARA ou Drive/Acervo antes de escolher a pasta.
 - [ ] **Lote 1 — Arquivo/Recursos**: mover primeiro tudo que é claramente material de referência ou coisa encerrada (menos ambíguo, menor risco de errar a categoria).
 - [ ] **Lote 2 — Areas**: mover responsabilidades contínuas (trabalho, estudos, pessoal, mídia/criativo) para as subpastas corretas de `2-Areas/`.
 - [ ] **Lote 3 — Projetos ativos**: migrar por último, com calma, um projeto de cada vez, para minimizar o risco de atrapalhar um trabalho em andamento.
@@ -49,9 +52,10 @@ Migrar em lotes, sempre na ordem abaixo — do mais fácil/menos ambíguo para o
 
 Para não deixar a estrutura bagunçar de novo depois da migração:
 
-- [ ] **Semanal**: esvaziar `0-Inbox/` e limpar Desktop/Downloads.
+- [ ] **Semanal**: esvaziar `0-Inbox/` local e o `00-09_Sistema/01_Inbox` do Drive, e limpar Desktop/Downloads.
 - [ ] **Mensal**: revisar os projetos ativos em `1-Projetos/` — algum já deveria estar em `4-Arquivo/01-Projetos-Concluidos/`?
 - [ ] **Trimestral**: revisar `2-Areas/` — alguma área encerrou ou perdeu relevância? Mover o que for necessário para `4-Arquivo/02-Areas-Inativas/`.
+- [ ] **Trimestral**: subir para o Acervo do Drive o que estiver maduro no `4-Arquivo/` local (regra-ponte) — entregáveis finais que merecem guarda de longo prazo vão para a categoria certa do `Acervo/` (tipicamente `30-39_Trabalho/32_Projetos-Concluidos`); o `4-Arquivo` local é estação intermediária, não destino final.
 - [ ] **Anual**: revisão geral de toda a estrutura + limpeza de `4-Arquivo/` — algo já pode ser deletado de vez?
 
 ## Checklist resumido final
@@ -60,8 +64,8 @@ Para não deixar a estrutura bagunçar de novo depois da migração:
 - [ ] Ferramenta de duplicados instalada e testada.
 - [ ] Inventário de arquivos existentes concluído.
 - [ ] Tudo sem lugar óbvio movido para `0-Inbox/`.
-- [ ] Estrutura de pastas criada localmente via `scripts/criar-estrutura.ps1`.
-- [ ] Estrutura de pastas criada no Google Drive (mesmo nome, mesma hierarquia).
+- [ ] Estrutura PARA criada localmente via `scripts/criar-estrutura.ps1`.
+- [ ] Estrutura do Acervo (Johnny Decimal) criada no Google Drive via `scripts/criar-estrutura-drive.ps1`.
 - [ ] Lote 1 (Arquivo/Recursos) migrado.
 - [ ] Lote 2 (Areas) migrado.
 - [ ] Lote 3 (Projetos ativos) migrado.
